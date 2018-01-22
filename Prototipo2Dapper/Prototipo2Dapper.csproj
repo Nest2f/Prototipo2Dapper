@@ -111,6 +111,7 @@
     <Content Include="css\style.red.css" />
     <Content Include="css\style.sea.css" />
     <Content Include="css\style.violet.css" />
+    <Content Include="img\calidad.png" />
     <Content Include="js\99347ac47f.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
