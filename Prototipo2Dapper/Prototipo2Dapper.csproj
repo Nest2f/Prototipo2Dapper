@@ -95,6 +95,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\AllUsers.css" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap-reboot.min.css" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap.css" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap.min.css" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\js\bootstrap.js" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\js\bootstrap.min.js" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\popper.min.js" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\tether.min.css" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\tether.min.js" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\custom.css" />
@@ -140,6 +151,13 @@
     <Content Include="Autentificacion.Master" />
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="AdminDashboard.Master" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap-reboot.min.css.map" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap.css.map" />
+    <Content Include="css\bootstrap-4.0.0-alpha.6-dist-\css\bootstrap.min.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -151,9 +169,17 @@
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="views\Login.aspx" />
+    <Content Include="views\Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard.Master.cs">
+      <DependentUpon>AdminDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Master.designer.cs">
+      <DependentUpon>AdminDashboard.Master</DependentUpon>
+    </Compile>
     <Compile Include="Autentificacion.Master.cs">
       <DependentUpon>Autentificacion.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +194,13 @@
     </Compile>
     <Compile Include="views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
