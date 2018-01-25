@@ -31,7 +31,7 @@ namespace Prototipo2Dapper
                 {
                     System.Diagnostics.Debug.WriteLine("no postback");
                     usuario = new Usuario();
-                    usuario.ID = Convert.ToInt32(Session["id_Profecional"].ToString());
+                    usuario.ID = Convert.ToInt32(Session["ID"].ToString());
                     UsuarioLN ln = new UsuarioLN();
                     usuario = ln.UsuarioID(usuario);
 

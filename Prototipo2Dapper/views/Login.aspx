@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Autentificacion.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Prototipo2Dapper.views.Login" %>
+﻿<%@ Page EnableEventValidation="false" Title="" Language="C#" MasterPageFile="~/Autentificacion.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Prototipo2Dapper.views.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content_autentification" runat="server">
@@ -24,5 +24,5 @@
                 <small>Do not have an account? </small><a href="Register" class="signup">Signup</a>
             </div>
         </div>
-    </div>
+    </div>    
 </asp:Content>

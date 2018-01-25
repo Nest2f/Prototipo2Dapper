@@ -34,7 +34,6 @@ namespace AccesoDatos
                 cadenaConexion = Properties.Settings.Default.CADENA_CONEXION;
                 //remote
                 // cadenaConexion = Properties.Settings.Default.CADENA_CONEXIONAzure;
-
                 factory = DbProviderFactories.GetFactory(proveedor);
             }
             catch (ConfigurationException ex)

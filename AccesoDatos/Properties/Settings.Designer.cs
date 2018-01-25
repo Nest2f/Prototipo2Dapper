@@ -25,7 +25,7 @@ namespace AccesoDatos.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Password=cuak;Username=postgres;Database=prueba1;Port=5433;Host=127.0.0.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Host=127.0.0.1;Port=5433;Database=prueba1;Username=postgres;Password=cuak")]
         public string CADENA_CONEXION {
             get {
                 return ((string)(this["CADENA_CONEXION"]));

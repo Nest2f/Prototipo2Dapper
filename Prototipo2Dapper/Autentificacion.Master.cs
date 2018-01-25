@@ -14,7 +14,7 @@ namespace Prototipo2Dapper
             if (Session["logeado"] != null)//si existe estara logeado
             {
                 //   Response.Redirect("HomeAdmin.aspx");
-                Response.Redirect(GetRouteUrl("HomeAdminRoute", null));
+                Response.Redirect(GetRouteUrl("LoginRoute", null));
             }
         }
     }

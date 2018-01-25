@@ -59,9 +59,7 @@ namespace AccesoDatos
             Usuario user = null;
             BaseDatos bd = new BaseDatos();
             bd.Conectar();
-            bd.CrearComandoStrSql("select  * from usuario  where apellidos ='" + usuario.apellidos + "' AND contrasenia='" + usuario.nombre + "'");
-
-
+            bd.CrearComandoStrSql("select  * from usuario  where apellidos ='" + usuario.apellidos + "' AND nombre='" + usuario.nombre + "'");
             foreach (Usuario item in Mapear(bd.EjecutarConsulta()))
             {
                 user = item;

@@ -30,16 +30,16 @@ namespace Prototipo2Dapper.views
                 Session["logeado"] = true;
                 Session["ID"] = usuario.ID;
                 Session["nombres"] = usuario.nombre;
-                Session["apellidos"] = usuario.apellidos;           
+                Session["apellidos"] = usuario.apellidos;
                 // Response.Redirect("HomeAdmin.aspx");
-                Response.Redirect(GetRouteUrl("HomeAdminRoute", null));
+                Response.Redirect(GetRouteUrl("LoginRoute", null));
             }
             else
             {
-                //    string script = @"<script type='text/javascript'>
-                //                alert('Error En Nombre de Usuario o Contraseña  ');
+                //string script = @"<script type='text/javascript'>
+                //                alert('Error En Nombre de Usuario o Contraseña ');
                 //            </script>";
-                //el script esta en js/app/appAlers.js
+                ////el script esta en js / app / appAlers.js
                 //ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "errorAlertLogin();", true);
                 //ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "AlertRedirect('Actualización','Correcta','success','OK','Register');", true);
                 ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "AlertNoRedirect('Error!','Usuario o Contraseña Incorrectos','error','OK');", true);
