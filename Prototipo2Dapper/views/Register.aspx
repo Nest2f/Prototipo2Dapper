@@ -13,13 +13,13 @@
         <div class="form d-flex align-items-center">
             <div class="content">
                 <form id="register-form">
-                    <h2 class="input-material">Nuevo Usuario</h2>
+                    <h2 class="input-material">Nuevo Empresa</h2>
                     <br />
                     <br />
                     <div class="form-group">
                         <asp:TextBox ID="register_cedula" runat="server" CssClass="input-material" required=""></asp:TextBox>
 
-                        <label for="register_cedula" class="label-material">Cedula</label>
+                        <label for="register_cedula" class="label-material">Nombre de la Empresa</label>
                     </div>
                     <table style="width: 100%">
                         <tr>
@@ -28,7 +28,7 @@
 
                                     <asp:TextBox ID="register_nombres" runat="server" CssClass="input-material" required=""></asp:TextBox>
 
-                                    <label for="register_nombres" class="label-material">Nombres</label>
+                                    <label for="register_nombres" class="label-material">Tipo de servicio Turistico</label>
                                 </div>
                             </td>
                             <td>
@@ -36,14 +36,14 @@
 
                                     <asp:TextBox ID="register_apellidos" runat="server" CssClass="input-material" required=""></asp:TextBox>
 
-                                    <label for="register_apellidos" class="label-material">Apellidos</label>
+                                    <label for="register_apellidos" class="label-material">Categoria</label>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="form-group">
-                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Sexo</p>
+                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Indefinido</p>
                                     <asp:ObjectDataSource ID="ObjectDataSourceSexo" runat="server" SelectMethod="Mostrar" TypeName="LogicaNegocio.SexoLN"></asp:ObjectDataSource>
                                     <asp:DropDownList ID="DropDownListSexo" runat="server" DataSourceID="ObjectDataSourceSexo" DataTextField="descrpcion" DataValueField="id_sexo">
                                     </asp:DropDownList>
@@ -51,7 +51,7 @@
                             </td>
                             <td>
                                 <div class="form-group">
-                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Formación Profecional</p>
+                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Indefinido</p>
                                     <asp:ObjectDataSource ID="ObjectDataSourceFormacionProfecional" runat="server" SelectMethod="Mostrar" TypeName="LogicaNegocio.FormacionProfecionalLN"></asp:ObjectDataSource>
                                     <asp:DropDownList ID="DropDownListFormacionProfecional" runat="server" DataSourceID="ObjectDataSourceFormacionProfecional" DataTextField="descrpcion" DataValueField="id_formacionProfecional">
                                     </asp:DropDownList>
@@ -61,7 +61,7 @@
                         <tr>
                             <td>
                                 <div class="form-group">
-                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Especialidad</p>
+                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Indefinido</p>
                                     <asp:ObjectDataSource ID="ObjectDataSourceEspecialidad" runat="server" SelectMethod="Mostrar" TypeName="LogicaNegocio.EspecialidadLN"></asp:ObjectDataSource>
                                     <asp:DropDownList ID="DropDownListEspecialidad" runat="server" DataSourceID="ObjectDataSourceEspecialidad" DataTextField="descrpcion" DataValueField="id_especialidad">
                                     </asp:DropDownList>
@@ -69,7 +69,7 @@
                             </td>
                             <td>
                                 <div class="form-group">
-                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Nacionalidad</p>
+                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Indefinido</p>
                                     <asp:ObjectDataSource ID="ObjectDataSourceNacionalidad" runat="server" SelectMethod="Mostrar" TypeName="LogicaNegocio.NacionalidadLN"></asp:ObjectDataSource>
                                     <asp:DropDownList ID="DropDownListNacionalidad" runat="server" DataSourceID="ObjectDataSourceNacionalidad" DataTextField="descrpcion" DataValueField="id_nacionalidad">
                                     </asp:DropDownList>
@@ -79,7 +79,7 @@
                         <tr>
                             <td>
                                 <div class="form-group">
-                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Autoidentificación</p>
+                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Indefinido</p>
                                     <asp:ObjectDataSource ID="ObjectDataSourceAutoidentificación" runat="server" SelectMethod="Mostrar" TypeName="LogicaNegocio.AutoidetificacionLN"></asp:ObjectDataSource>
                                     <asp:DropDownList ID="DropDownListAutoidentificación" runat="server" DataSourceID="ObjectDataSourceAutoidentificación" DataTextField="descrpcion" DataValueField="id_autoidetificacion">
                                     </asp:DropDownList>
@@ -87,7 +87,7 @@
                             </td>
                             <td>
                                 <div class="form-group">
-                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Codigo MPS</p>
+                                    <p style="font-weight: 300; color: #aaa; font-size: 0.8em; color: #2b90d9;" class="label-material">Indefinido</p>
                                     <asp:ObjectDataSource ID="ObjectDataSourceCodigoMPS" runat="server" SelectMethod="Mostrar" TypeName="LogicaNegocio.CodigoMPSLN"></asp:ObjectDataSource>
                                     <asp:DropDownList ID="DropDownListCodigoMPS" runat="server" DataSourceID="ObjectDataSourceCodigoMPS" DataTextField="descrpcion" DataValueField="id_codigoMPS">
                                     </asp:DropDownList>
@@ -98,14 +98,13 @@
                             <td>
                                 <div class="form-group">
                                     <asp:TextBox ID="register_fechaNacimiento" type="date" runat="server" CssClass="input-material" required=""></asp:TextBox>
-                                    <label for="register_fechaNacimiento" class="label-material">Fecha Nacimiento</label>
+                                    Indefinido
                                 </div>
                             </td>
                             <td>
                                 <div class="form-group">
                                     <asp:TextBox ID="register_passowrd" runat="server" CssClass="input-material" required="" Type="password"></asp:TextBox>
-                                    <label for="register_passowrd" class="label-material">Password</label>
-                                </div>
+                                    Indefinido</div>
                             </td>
                         </tr>
                     </table>
