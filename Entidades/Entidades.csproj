@@ -44,7 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categoria.cs" />
+    <Compile Include="Ciudadano.cs" />
+    <Compile Include="Cuestionario.cs" />
+    <Compile Include="CuestionarioPregunta.cs" />
+    <Compile Include="Encuesta.cs" />
+    <Compile Include="EncuestaPregunta.cs" />
+    <Compile Include="OpcionPregunta.cs" />
+    <Compile Include="OpcionTipoPregunta.cs" />
+    <Compile Include="Pregunta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoCuestionario.cs" />
+    <Compile Include="TipoPregunta.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
