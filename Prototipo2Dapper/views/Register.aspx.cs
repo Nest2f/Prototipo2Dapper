@@ -24,8 +24,8 @@ namespace Prototipo2Dapper.views
                 Boolean noExiste = true;
                 Usuario item = new Usuario();
                 item.ID = 0;
-                item.nombre = register_nombres.Text;
-                item.apellidos = register_apellidos.Text;
+                item.nombrecompleto = register_nombres.Text;
+                item.clave = register_apellidos.Text;
                 //item.ci = register_cedula.Text;
                 //item.contrasenia = register_passowrd.Text;
                 //item.FirmaSello = "";

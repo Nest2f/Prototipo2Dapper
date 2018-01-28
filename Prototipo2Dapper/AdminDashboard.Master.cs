@@ -65,8 +65,8 @@ namespace Prototipo2Dapper
         public void cargarDatos()
         {
             //ImagePerfil.ImageUrl = usuario.foto;
-            register_nombres.Text = usuario.nombre;
-            register_apellidos.Text = usuario.apellidos;
+            register_nombres.Text = usuario.usuario;
+            register_passowrd.Text = usuario.clave;
             //register_passowrd.Text = usuario.ID;
             //register_fechaNacimiento.Text = usuario.fechaNacimiento.ToString("yyyy-MM-dd");
             //register_cedula.Text = profecional.ci;
@@ -144,8 +144,8 @@ namespace Prototipo2Dapper
                 Usuario item = new Usuario();
                 item = usuario;
                 //item.id_Profecional = 0;
-                item.nombre = register_nombres.Text;
-                item.apellidos = register_apellidos.Text;
+                item.nombrecompleto = register_nombres.Text;
+                item.clave = register_apellidos.Text;
                 //item.ID = register_cedula.Text;
                 //item.contrasenia = register_passowrd.Text;
                 //item.FirmaSello = "";
@@ -202,9 +202,9 @@ namespace Prototipo2Dapper
         public void guardarSession(Usuario usuario)
         {
             Session["logeado"] = true;
-            Session["id_Profecional"] = usuario.ID;
-            Session["nombres"] = usuario.nombre;
-            Session["apellidos"] = usuario.apellidos;
+            Session["id"] = usuario.ID;
+            Session["nombres"] = usuario.nombrecompleto;
+            Session["clave"] = usuario.clave;
             //Session["fechaNacimiento"] = usuario.fechaNacimiento;
             //Session["ci"] = usuario.ci;
             //Session["contrasenia"] = usuario.contrasenia;

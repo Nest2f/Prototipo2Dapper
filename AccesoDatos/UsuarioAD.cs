@@ -15,12 +15,19 @@ namespace AccesoDatos
             BaseDatos bd = new BaseDatos();
             bd.Conectar();
             //SELECT SCOPE_IDENTITY() retorna el id que fue insertado
-            bd.CrearComandoStrSql("insert usuario (nombre, apellidos, ID)" +
-            " values(@nombre, @apellidos, @ID) SELECT SCOPE_IDENTITY()");
-
-            bd.AsignarParametro("@nombres", item.nombre);
-            bd.AsignarParametro("@apellidos", item.apellidos);
+            bd.CrearComandoStrSql("insert usuario (id, nombrecompleto, email, usuario, clave, activo, rol)" +
+            " values(@nombres, @usuario, @clave, @ID) SELECT SCOPE_IDENTITY()");
             bd.AsignarParametroInt("@ID", item.ID);
+            bd.AsignarParametro("@nombres", item.nombrecompleto);
+            bd.AsignarParametro("@email", item.email);
+            bd.AsignarParametro("@usuario", item.usuario);
+            bd.AsignarParametro("@clave", item.clave);
+            bd.AsignarParametro("@activo", item.activo);
+            //bd.AsignarParametro("@foto", item.foto);
+            bd.AsignarParametro("@rol", item.rol);
+
+
+
             //el id que fue insertado
             int id = bd.EjecutarComandoSqlReturnID();
             bd.Desconectar();
@@ -32,10 +39,14 @@ namespace AccesoDatos
             BaseDatos bd = new BaseDatos();
             bd.Conectar();
             //SELECT SCOPE_IDENTITY() retorna el id que fue insertado
-            bd.CrearComandoStrSql(" update usuario set nombres = @nombres, spellidos = @Apellidos, ID = @ID where ID=" + item.ID + "");
-            bd.AsignarParametro("@nombres", item.nombre);
-            bd.AsignarParametro("@Apellidos", item.apellidos);
-            bd.AsignarParametroInt("@ID", item.ID);
+            bd.CrearComandoStrSql(" update usuario set nombres = @nombrecompleto, email = @email, email = @email, usuario = @usuario, clave = @clave, activo = @activo, rol = @rol where ID=" + item.ID + "");
+            bd.AsignarParametroInt("@id", item.ID);
+            bd.AsignarParametro("@nombres", item.nombrecompleto);
+            bd.AsignarParametro("@email", item.email);
+            bd.AsignarParametro("@usuario", item.usuario);
+            bd.AsignarParametro("@clave", item.clave);
+            bd.AsignarParametro("@activo", item.activo);
+            bd.AsignarParametro("@rol", item.rol);
             //el id que fue insertado
 
             int id = bd.EjecutarComandoSqlReturnID();
@@ -59,7 +70,7 @@ namespace AccesoDatos
             Usuario user = null;
             BaseDatos bd = new BaseDatos();
             bd.Conectar();
-            bd.CrearComandoStrSql("select  * from usuario  where apellidos ='" + usuario.apellidos + "' AND nombre='" + usuario.nombre + "'");
+            bd.CrearComandoStrSql("select  * from usuario  where usuario ='" + usuario.usuario + "' AND clave='" + usuario.clave + "'");
             foreach (Usuario item in Mapear(bd.EjecutarConsulta()))
             {
                 user = item;
@@ -76,9 +87,10 @@ namespace AccesoDatos
             while (Datos.Read())
             {
                 Usuario item = new Usuario();
-                item.nombre = Convert.ToString(Datos.GetValue(0));
-                item.apellidos = Convert.ToString(Datos.GetValue(1));
-                item.ID = Convert.ToInt32(Datos.GetValue(2));
+                item.ID = Convert.ToInt32(Datos.GetValue(0));
+                item.usuario = Convert.ToString(Datos.GetValue(3));
+                item.clave = Convert.ToString(Datos.GetValue(4));
+                
                 list.Add(item);
             }
             return list;

@@ -18,8 +18,8 @@ namespace Prototipo2Dapper.views
         protected void login_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
-            usuario.nombre = login_username.Text != null ? login_username.Text : "";
-            usuario.apellidos = login_password.Text != null ? login_password.Text : "";
+            usuario.usuario = login_username.Text != null ? login_username.Text : "";
+            usuario.clave = login_password.Text != null ? login_password.Text : "";
             UsuarioLN lnUsuario = new UsuarioLN();
 
             usuario = lnUsuario.Login(usuario);
@@ -29,8 +29,8 @@ namespace Prototipo2Dapper.views
                 //si se logeo corectamente
                 Session["logeado"] = true;
                 Session["ID"] = usuario.ID;
-                Session["nombres"] = usuario.nombre;
-                Session["apellidos"] = usuario.apellidos;
+                Session["usuario"] = usuario.usuario;
+                Session["clave"] = usuario.clave;
                 // Response.Redirect("HomeAdmin.aspx");
                 Response.Redirect(GetRouteUrl("LoginRoute", null));
             }
