@@ -21,6 +21,8 @@ namespace Prototipo2Dapper
             routes.MapPageRoute("LoginRoute", "views/Login", "~/views/Login.aspx");
             routes.MapPageRoute("HomeAdminRoute", "views/HomeAdmin", "~/views/HomeAdmin.aspx");            
             routes.MapPageRoute("RegisterRoute", "views/Register", "~/views/Register.aspx");
+            routes.MapPageRoute("MainRoute", "views/Main", "~/views/Main.aspx");
+            routes.MapPageRoute("InquestRoute", "views/Inquest", "~/views/Inquest.aspx");
 
             //routes.MapPageRoute("PacientesRoute", "views/PacientesAll", "~/views/Usuarios.aspx");
             //routes.MapPageRoute("GruposRoute", "views/GruposAll", "~/views/Groups.aspx");

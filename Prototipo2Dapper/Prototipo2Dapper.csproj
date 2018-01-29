@@ -179,6 +179,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="views\Inquest.aspx" />
     <Content Include="views\Login.aspx" />
+    <Content Include="views\Main.aspx" />
     <Content Include="views\Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
     <Compile Include="views\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

@@ -7,16 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace Prototipo2Dapper.views
 {
-    public partial class Inquest : System.Web.UI.Page
+    public partial class Main : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-
+            Response.Redirect(GetRouteUrl("InquestRoute", null));
         }
     }
 }
