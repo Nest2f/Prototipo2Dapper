@@ -181,6 +181,7 @@
     <Content Include="views\Login.aspx" />
     <Content Include="views\Main.aspx" />
     <Content Include="views\Register.aspx" />
+    <Content Include="views\RegisterUser.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +230,13 @@
     </Compile>
     <Compile Include="views\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\RegisterUser.aspx.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\RegisterUser.aspx.designer.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
