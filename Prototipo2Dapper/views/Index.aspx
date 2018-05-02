@@ -12,7 +12,7 @@
                 <div class="main-text hidden-xs">
                     <div class="col-md-12 text-center">
                         <h1>
-                            aviso 1.<br /> <span class="yellow">- descripcion</span></h1>
+                            TITULO 1<br /> <span class="yellow">Subtitulo 1</span></h1>
                         
                     </div>
                 </div>
@@ -21,7 +21,7 @@
                 <div class="main-text hidden-xs">
                     <div class="col-md-12 text-center">
                        <h1>
-                            aviso 2.<br /> <span class="yellow">- descripcion2</span></h1>
+                            TITULO 2<br /> <span class="yellow">Subtitulo 2</span></h1>
                         
                     </div>
                 </div>

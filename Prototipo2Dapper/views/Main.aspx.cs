@@ -13,10 +13,5 @@ namespace Prototipo2Dapper.views
         {
 
         }
-
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect(GetRouteUrl("InquestRoute", null));
-        }
     }
 }
