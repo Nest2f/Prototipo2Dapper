@@ -10,6 +10,15 @@
 namespace Prototipo2Dapper.views {
     
     
-    public partial class Main {
+    public partial class RegisterCat {
+        
+        /// <summary>
+        /// Control register_categoria.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox register_categoria;
     }
 }

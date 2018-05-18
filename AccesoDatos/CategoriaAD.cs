@@ -9,37 +9,41 @@ namespace AccesoDatos
 {
     public class CategoriaAD
     {
-        public int InsertCategorie(Categoria item)
+        public int InsertCat(Categoria item)
 
         {
             BaseDatos bd = new BaseDatos();
             bd.Conectar();
             //SELECT SCOPE_IDENTITY() retorna el id que fue insertado
             bd.CrearComandoStrSql("insert categoria (id, descripcion, id_padre)" +
-            " values(@id, @descripcion, @id_padre) SELECT SCOPE_IDENTITY()");
+            " values(@id_padre, @descripcion @id) SELECT SCOPE_IDENTITY()");
             bd.AsignarParametroInt("@id", item.id);
             bd.AsignarParametro("@descripcion", item.descripcion);
             bd.AsignarParametroInt("@id_padre", item.id_padre);
+
             //el id que fue insertado
             int id = bd.EjecutarComandoSqlReturnID();
             bd.Desconectar();
             return id;
         }
-        public int UpdateCategorie(Categoria item)
+
+        public int UpdateCat(Categoria item)
         {
             BaseDatos bd = new BaseDatos();
             bd.Conectar();
             //SELECT SCOPE_IDENTITY() retorna el id que fue insertado
-            bd.CrearComandoStrSql(" update categoria set id = @id, descripcion = @descripcion, id_padre = @id_padre where id=" + item.id + "");
+            bd.CrearComandoStrSql(" update categoria set descripcion = @descripcion, id_padre = @id_padre where id=" + item.id + "");
             bd.AsignarParametroInt("@id", item.id);
             bd.AsignarParametro("@descripcion", item.descripcion);
             bd.AsignarParametroInt("@id_padre", item.id_padre);
             //el id que fue insertado
+
             int id = bd.EjecutarComandoSqlReturnID();
             bd.Desconectar();
             return id;
         }
-        public List<Categoria> MostrarCategoria()
+
+        public List<Categoria> MostrarCat()
         {
             List<Categoria> list = new List<Categoria>();
             BaseDatos bd = new BaseDatos();
@@ -49,6 +53,7 @@ namespace AccesoDatos
             bd.Desconectar();
             return list;
         }
+
         public List<Categoria> Mapear(System.Data.Common.DbDataReader Datos)
         {
             List<Categoria> list = new List<Categoria>();
@@ -56,19 +61,20 @@ namespace AccesoDatos
             {
                 Categoria item = new Categoria();
                 item.id = Convert.ToInt32(Datos.GetValue(0));
-                item.descripcion = Convert.ToString(Datos.GetValue(1));
-                item.id_padre = Convert.ToInt32(Datos.GetValue(2));
+                item.descripcion = Convert.ToString(Datos.GetValue(3));
+                item.id_padre = Convert.ToInt32(Datos.GetValue(4));
+
                 list.Add(item);
             }
             return list;
         }
-        public Categoria CategoriaID(Categoria categoria)
+        public Categoria CategoriasID(Categoria categoria)
         {
             Categoria grup = null;
             BaseDatos bd = new BaseDatos();
             bd.Conectar();
             bd.CrearComandoStrSql("Select * from categoria");
-            bd.AsignarParametroInt("@id_usuario", categoria.id);
+            bd.AsignarParametroInt("@id", categoria.id);
             foreach (Categoria item in Mapear(bd.EjecutarConsulta()))
             {
                 grup = item;

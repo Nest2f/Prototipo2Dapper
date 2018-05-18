@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class OpcionPregunta
     {
-        public int id_OPregunta { get; set; }
+        public int id_OpcionPregunta { get; set; }
         public int id_Pregunta { get; set; }
         public string opcion { get; set; }
         public float valor { get; set; }

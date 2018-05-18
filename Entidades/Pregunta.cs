@@ -17,6 +17,6 @@ namespace Entidades
         public int fmodificada { get; set; }
         public int creadapor { get; set; }
         public int modificadapor { get; set; }
-        public int estado { get; set; }
+        public bool estado { get; set; }
     }
 }

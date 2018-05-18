@@ -544,8 +544,12 @@
     <Content Include="views\Login.aspx" />
     <Content Include="views\Main.aspx" />
     <Content Include="views\Register.aspx" />
+    <Content Include="views\RegisterCat.aspx" />
+    <Content Include="views\RegisterCd.aspx" />
     <Content Include="views\RegisterUser.aspx" />
     <Content Include="views\Requirement.aspx" />
+    <Content Include="views\TypeQuest.aspx" />
+    <Content Include="views\UserView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -616,6 +620,20 @@
     <Compile Include="views\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="views\RegisterCat.aspx.cs">
+      <DependentUpon>RegisterCat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\RegisterCat.aspx.designer.cs">
+      <DependentUpon>RegisterCat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\RegisterCd.aspx.cs">
+      <DependentUpon>RegisterCd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\RegisterCd.aspx.designer.cs">
+      <DependentUpon>RegisterCd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="views\RegisterUser.aspx.cs">
       <DependentUpon>RegisterUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -629,6 +647,20 @@
     </Compile>
     <Compile Include="views\Requirement.aspx.designer.cs">
       <DependentUpon>Requirement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\TypeQuest.aspx.cs">
+      <DependentUpon>TypeQuest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\TypeQuest.aspx.designer.cs">
+      <DependentUpon>TypeQuest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\UserView.aspx.cs">
+      <DependentUpon>UserView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\UserView.aspx.designer.cs">
+      <DependentUpon>UserView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

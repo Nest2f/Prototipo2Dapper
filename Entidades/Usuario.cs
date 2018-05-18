@@ -13,8 +13,8 @@ namespace Entidades
         public string email { get; set; }
         public string usuario { get; set; }
         public string clave { get; set; }
-        public string activo { get; set; }
+        public bool activo { get; set; }
         //public string foto { get; set; }
-        public string rol { get; set; }
+        public int rol { get; set; }
     }
 }

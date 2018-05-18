@@ -22,9 +22,9 @@ namespace AccesoDatos
             bd.AsignarParametro("@email", item.email);
             bd.AsignarParametro("@usuario", item.usuario);
             bd.AsignarParametro("@clave", item.clave);
-            bd.AsignarParametro("@activo", item.activo);
+            bd.AsignarParametroBoolean("@activo", item.activo);
             //bd.AsignarParametro("@foto", item.foto);
-            bd.AsignarParametro("@rol", item.rol);
+            bd.AsignarParametroInt("@rol", item.rol);
 
 
 
@@ -45,8 +45,8 @@ namespace AccesoDatos
             bd.AsignarParametro("@email", item.email);
             bd.AsignarParametro("@usuario", item.usuario);
             bd.AsignarParametro("@clave", item.clave);
-            bd.AsignarParametro("@activo", item.activo);
-            bd.AsignarParametro("@rol", item.rol);
+            bd.AsignarParametroBoolean("@activo", item.activo);
+            bd.AsignarParametroInt("@rol", item.rol);
             //el id que fue insertado
 
             int id = bd.EjecutarComandoSqlReturnID();
@@ -90,7 +90,7 @@ namespace AccesoDatos
                 item.ID = Convert.ToInt32(Datos.GetValue(0));
                 item.usuario = Convert.ToString(Datos.GetValue(3));
                 item.clave = Convert.ToString(Datos.GetValue(4));
-                
+
                 list.Add(item);
             }
             return list;
@@ -101,7 +101,7 @@ namespace AccesoDatos
             BaseDatos bd = new BaseDatos();
             bd.Conectar();
             bd.CrearComandoStrSql("Select * from usuario");
-            bd.AsignarParametroInt("@id_usuario",usuarios.ID);
+            bd.AsignarParametroInt("@id_usuario", usuarios.ID);
             foreach (Usuario item in Mapear(bd.EjecutarConsulta()))
             {
                 grup = item;
@@ -109,7 +109,8 @@ namespace AccesoDatos
             }
             bd.Desconectar();
             return grup;
-        }
-    }      
- 
+        }        
+    }   
+
+
 }

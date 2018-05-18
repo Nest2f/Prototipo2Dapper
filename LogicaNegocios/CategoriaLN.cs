@@ -13,22 +13,22 @@ namespace LogicaNegocios
         public void Insertar(Categoria categoria)
         {
             CategoriaAD acceso = new CategoriaAD();
-            acceso.InsertCategorie(categoria);
+            acceso.InsertCat(categoria);
         }
         public void Update(Categoria categoria)
         {
             CategoriaAD acceso = new CategoriaAD();
-            acceso.UpdateCategorie(categoria);
+            acceso.UpdateCat(categoria);
         }
         public List<Categoria> Mostrar()
         {
             CategoriaAD acceso = new CategoriaAD();
-            return acceso.MostrarCategoria();
+            return acceso.MostrarCat();
         }
         public Categoria CategoriaID(Categoria categoria)
         {
             CategoriaAD acceso = new CategoriaAD();
-            return acceso.CategoriaID(categoria);
+            return acceso.CategoriasID(categoria);
         }
     }
 }
